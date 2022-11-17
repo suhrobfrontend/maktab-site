@@ -54,6 +54,10 @@
   list-style-type: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Mulish", sans-serif;
 }
@@ -188,5 +192,136 @@ body {
 @media (max-width: 576px) {
   .main-header .header .nav__link {
     font-size: 14px;
+  }
+}
+
+.about {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .about {
+    flex-direction: column-reverse;
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+.about-content {
+  width: 45%;
+}
+@media (max-width: 992px) {
+  .about-content {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .about-content {
+    width: 100%;
+    text-align: center;
+  }
+}
+.about__title {
+  font: 26px "Mulish";
+  line-height: 28px;
+  font-weight: 700;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .about__title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .about__title {
+    font-size: 21px;
+    text-align: center;
+  }
+}
+.about__subtitle {
+  font: 22px "Mulish";
+  line-height: 23px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 15px;
+}
+@media (max-width: 992px) {
+  .about__subtitle {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+.about__description {
+  font: 18px "Mulish";
+  line-height: 20px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 10px;
+  text-align: justify;
+  opacity: 0.8;
+}
+@media (max-width: 992px) {
+  .about__description {
+    font-size: 17px;
+  }
+}
+@media (max-width: 768px) {
+  .about__description {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .about__description {
+    font-size: 15px;
+  }
+}
+.about__link {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #174bb4;
+  display: inline-block;
+  color: #FFF;
+  font: 16px "Mulish";
+  line-height: 20px;
+  margin-top: 15px;
+  transition: 0.5s;
+}
+.about__link:hover {
+  background-color: #3068d8;
+}
+.about-image {
+  width: 50%;
+}
+@media (max-width: 992px) {
+  .about-image {
+    width: 58%;
+  }
+}
+@media (max-width: 768px) {
+  .about-image {
+    width: 100%;
+  }
+}
+.about__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 500px;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .about__img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: auto;
   }
 }/*# sourceMappingURL=main.css.map */

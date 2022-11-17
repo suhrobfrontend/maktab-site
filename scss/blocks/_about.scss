@@ -1,0 +1,123 @@
+.about {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column-reverse;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  &-content {
+    width: 45%;
+
+    @media (max-width: $tablet-l) {
+      width: 40%;
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font: 26px "Mulish";
+    line-height: 28px;
+    font-weight: 700;
+    color: $black;
+
+    @media (max-width: $tablet-l) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    font: 22px "Mulish";
+    line-height: 23px;
+    font-weight: 500;
+    color: $black;
+    margin-top: 15px;
+
+    @media (max-width: $tablet-l) {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  &__description {
+    font: 18px "Mulish";
+    line-height: 20px;
+    font-weight: 500;
+    color: $black;
+    margin-top: 10px;
+    text-align: justify;
+    opacity: 0.8;
+
+    @media (max-width: $tablet-l) {
+      font-size: 17px;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 15px;
+    }
+  }
+
+  &__link {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: $blue;
+    display: inline-block;
+    color: $white;
+    font: 16px "Mulish";
+    line-height: 20px;
+    margin-top: 15px;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: $hover-blue;
+    }
+  }
+
+  &-image {
+    width: 50%;
+
+    @media (max-width: $tablet-l) {
+      width: 58%;
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+    border-radius: 5px;
+
+    @media (max-width: $tablet) {
+      object-fit: contain;
+      height: auto;
+    }
+  }
+}
