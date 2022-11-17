@@ -1,0 +1,88 @@
+// Fonts
+/* mulish-regular - latin */
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fonts/mulish-v12-latin-regular.woff2") format("woff2"),
+    url("../fonts/mulish-v12-latin-regular.woff") format("woff");
+}
+/* mulish-300 - latin */
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(""), url("../fonts/mulish-v12-latin-300.woff2") format("woff2"),
+    url("../fonts/mulish-v12-latin-300.woff") format("woff");
+}
+/* mulish-500 - latin */
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(""), url("../fonts/mulish-v12-latin-500.woff2") format("woff2"),
+    url("../fonts/mulish-v12-latin-500.woff") format("woff");
+}
+/* mulish-600 - latin */
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(""), url("../fonts/mulish-v12-latin-600.woff2") format("woff2"),
+    url("../fonts/mulish-v12-latin-600.woff") format("woff");
+}
+/* mulish-700 - latin */
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/mulish-v12-latin-700.woff2") format("woff2"),
+    url("../fonts/mulish-v12-latin-700.woff") format("woff");
+}
+/* mulish-italic - latin */
+@font-face {
+  font-family: "Mulish";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fonts/mulish-v12-latin-italic.woff2") format("woff2"),
+    url("../fonts/mulish-v12-latin-italic.woff") format("woff");
+}
+
+// General styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $desktop;
+  padding: 0 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

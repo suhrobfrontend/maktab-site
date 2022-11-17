@@ -1,0 +1,119 @@
+.main-header {
+  position: sticky;
+  top: 0;
+  background-color: $white;
+  padding: 24px 0;
+
+  @media (max-width: $tablet) {
+    position: static;
+    background-color: transparent;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
+
+    #hamburger:checked ~ .nav .nav__list{
+      right: 0;
+    }
+
+    #menu, #close {
+      position: fixed;
+      z-index: 101;
+      right: 20px;
+      top: 20px;
+      font-size: 40px;
+      display: none;
+      background: $white;
+      border-radius: 5px;
+    }
+
+    #menu {
+      @media (max-width: $tablet) {
+        display: inline-block;
+      }
+    }
+
+    .nav {
+      &__list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        @media (max-width: $tablet-l) {
+          gap: 35px;
+        }
+
+        @media (max-width: $tablet) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 10px;
+          position: fixed;
+          right: -100%;
+          top: 0;
+          background-color: $white;
+          height: 100vh;
+          width: auto;
+          padding: 70px 20px 0 10px;
+          transition: .6s ease;
+        }
+
+        // @media (max-width: $mobile) {
+        //   width: 60%;
+        // }
+      }
+
+      &__link {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "Mulish";
+        font-weight: 700;
+        font-size: 18px;
+        color: $red;
+        transition: 0.5s ease;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          box-sizing: border-box;
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          height: 2px;
+          width: 100%;
+          background-color: $black;
+          transform: scaleX(0);
+          transition: 0.3s transform;
+          transform-origin: left;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: right;
+        }
+
+        &:hover {
+          color: black;
+        }
+
+        @media (max-width: $tablet-l) {
+          font-size: 17px;
+        }
+
+        @media (max-width: $tablet) {
+          font-size: 15px;
+        }
+
+        @media (max-width: $mobile) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
